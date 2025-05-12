@@ -20,4 +20,25 @@ to strt running the project
     "message": "pong"
 }
 
---->
+////<h>
+<br>
+ How It Works:
+ <br>
+Each request from a user (based on user_id header) is tracked in Redis.
+<br>
+If the user makes more than 5 requests within 60 seconds, they are blocked (responded with HTTP 429 "Too Many Requests").
+<br>
+After 60 seconds, their limit resets, and they can make requests again.
+<br>
+/////<h>
+<br>
+your rate limiter todos:
+<br>
+Limit requests per user ID
+<br>
+Limit requests per IP
+<br>
+Limit requests per region
+<br>
+Build a frontend to monitor rate-limited users/regions
+<br>
