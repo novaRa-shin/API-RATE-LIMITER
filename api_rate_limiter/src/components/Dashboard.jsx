@@ -23,7 +23,7 @@ export default function Dashboard() {
       return;
     }
     try {
-      const res = await axios.get('http://localhost:5000/api', {
+      const res = await axios.get('http://localhost:7005/api', {
         headers: { user_id: userId },
       });
       setResponseStatus(res.status);
@@ -40,7 +40,7 @@ export default function Dashboard() {
 
   const updateConfig = async () => {
     try {
-      await axios.post('http://localhost:5000/config', newConfig);
+      await axios.post('http://localhost:7005/config', newConfig);
       setConfig(newConfig);
       alert("Config updated successfully!");
     } catch (err) {
